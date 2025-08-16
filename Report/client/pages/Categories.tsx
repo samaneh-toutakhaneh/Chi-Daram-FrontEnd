@@ -1,0 +1,11 @@
+import React from 'react';
+import PlaceholderPage from '@/components/PlaceholderPage';
+
+export default function Categories() {
+  return (
+    <PlaceholderPage 
+      title="دسته بندی ها" 
+      description="مدیریت و سازماندهی دسته‌بندی‌های مختلف."
+    />
+  );
+}
