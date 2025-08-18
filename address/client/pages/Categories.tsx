@@ -1,10 +1,15 @@
-import PlaceholderPage from '@/components/PlaceholderPage';
+import React from 'react';
+import PlaceholderPage from './PlaceholderPage';
+import { CategoriesIcon } from '../components/Icons';
 
-export default function Categories() {
+const Categories: React.FC = () => {
   return (
     <PlaceholderPage
-      title="دسته بندی ها"
-      description="مدیریت دسته‌بندی‌های مختلف برای سازماندهی بهتر اقلام شما."
+      title="دسته‌بندی‌ها"
+      description="ایجاد و مدیریت دسته‌بندی‌های مختلف برای وسایل شما. می‌توانید دسته‌های جدید ایجاد کنید و وسایل خود را در آن‌ها سازماندهی کنید."
+      icon={<CategoriesIcon size={48} />}
     />
   );
-}
+};
+
+export default Categories;

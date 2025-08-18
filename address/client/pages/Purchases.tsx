@@ -1,10 +1,15 @@
-import PlaceholderPage from '@/components/PlaceholderPage';
+import React from 'react';
+import PlaceholderPage from './PlaceholderPage';
+import { BuyIcon } from '../components/Icons';
 
-export default function Purchases() {
+const Purchases: React.FC = () => {
   return (
     <PlaceholderPage
       title="خریدها"
-      description="مدیریت و پیگیری خریدهای انجام شده و تاریخچه خرید اقلام."
+      description="تاریخچه خریدهای شما و مدیریت اطلاعات مالی مربوط به وسایل خریداری شده در این قسمت ثبت می‌شود."
+      icon={<BuyIcon size={48} />}
     />
   );
-}
+};
+
+export default Purchases;

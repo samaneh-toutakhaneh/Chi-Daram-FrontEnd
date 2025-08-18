@@ -1,10 +1,15 @@
-import PlaceholderPage from '@/components/PlaceholderPage';
+import React from 'react';
+import PlaceholderPage from './PlaceholderPage';
+import { DepositsIcon } from '../components/Icons';
 
-export default function Deposits() {
+const Deposits: React.FC = () => {
   return (
     <PlaceholderPage
       title="امانات"
-      description="مدیریت اقلام امانی که به دیگران داده‌اید یا از آن‌ها گرفته‌اید."
+      description="مدیریت وسایلی که به صورت امانت به دیگران داده‌اید یا از آن‌ها گرفته‌اید. پیگیری وضعیت امانات و یادآوری‌ها."
+      icon={<DepositsIcon size={48} />}
     />
   );
-}
+};
+
+export default Deposits;

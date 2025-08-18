@@ -1,10 +1,15 @@
-import PlaceholderPage from '@/components/PlaceholderPage';
+import React from 'react';
+import PlaceholderPage from './PlaceholderPage';
+import { ReportsIcon } from '../components/Icons';
 
-export default function Reports() {
+const Reports: React.FC = () => {
   return (
     <PlaceholderPage
-      title="گزارشات"
-      description="مشاهده گزارشات و آمارهای مختلف از اقلام و فعالیت‌های شما."
+      title="گزارش‌ها"
+      description="گزارش‌های تفصیلی از استفاده، بازدید و سایر آمار مکان‌های شما در این قسمت ارائه می‌شود."
+      icon={<ReportsIcon size={48} />}
     />
   );
-}
+};
+
+export default Reports;

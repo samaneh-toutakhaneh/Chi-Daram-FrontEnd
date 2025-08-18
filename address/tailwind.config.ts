@@ -5,6 +5,10 @@ export default {
   content: ["./client/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
+    fontFamily: {
+      'vazirmatn': ['Vazirmatn', 'sans-serif'],
+      'sans': ['Vazirmatn', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -13,9 +17,6 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        'vazir': ['Vazirmatn', 'sans-serif'],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -25,6 +26,19 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        blue: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -60,15 +74,6 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        'chi-daram': {
-          'bg': '#f8f9fa',
-          'sidebar': '#ffffff',
-          'orange': '#ff6b35',
-          'blue': '#007bff',
-          'text-dark': '#2c3e50',
-          'text-light': '#6c757d',
-          'border': '#e9ecef',
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -99,8 +104,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("tailwindcss-rtl"),
-  ],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;

@@ -6,18 +6,19 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
+
+// Import pages
+import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
-import Locations from "./pages/Locations";
 import Items from "./pages/Items";
 import Categories from "./pages/Categories";
 import Reports from "./pages/Reports";
 import Purchases from "./pages/Purchases";
 import Deposits from "./pages/Deposits";
-import Profile from "./pages/Profile";
-import Settings from "./pages/Settings";
-import Logout from "./pages/Logout";
 import NotFound from "./pages/NotFound";
+
+// Import layout
+import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
 
@@ -27,20 +28,19 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/items" element={<Items />} />
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/reports" element={<Reports />} />
-            <Route path="/locations" element={<Locations />} />
-            <Route path="/purchases" element={<Purchases />} />
-            <Route path="/deposits" element={<Deposits />} />
-            <Route path="/logout" element={<Logout />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
+        <Routes>
+          {/* All routes wrapped with Layout */}
+          <Route path="/" element={<Layout><Home /></Layout>} />
+          <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+          <Route path="/items" element={<Layout><Items /></Layout>} />
+          <Route path="/categories" element={<Layout><Categories /></Layout>} />
+          <Route path="/reports" element={<Layout><Reports /></Layout>} />
+          <Route path="/purchases" element={<Layout><Purchases /></Layout>} />
+          <Route path="/deposits" element={<Layout><Deposits /></Layout>} />
+
+          {/* 404 Page */}
+          <Route path="*" element={<Layout><NotFound /></Layout>} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

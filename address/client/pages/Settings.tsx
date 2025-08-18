@@ -1,10 +1,15 @@
-import PlaceholderPage from '@/components/PlaceholderPage';
+import React from 'react';
+import PlaceholderPage from './PlaceholderPage';
+import { SettingsIcon } from '../components/Icons';
 
-export default function Settings() {
+const Settings: React.FC = () => {
   return (
     <PlaceholderPage
       title="تنظیمات"
-      description="تنظیمات عمومی برنامه، اعلان‌ها و سایر تنظیمات شخصی‌سازی."
+      description="تنظیمات حساب کاربری، اعلان‌ها، حریم خصوصی و سایر تنظیمات سیستم در این بخش قرار دارد."
+      icon={<SettingsIcon size={48} />}
     />
   );
-}
+};
+
+export default Settings;
