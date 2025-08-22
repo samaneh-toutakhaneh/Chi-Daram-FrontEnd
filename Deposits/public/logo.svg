@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue circular background -->
+  <circle cx="60" cy="60" r="60" fill="#2563eb"/>
+  
+  <!-- Persian letter "چ" in white -->
+  <text x="60" y="75" font-family="Vazirmatn, system-ui, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="white">چ</text>
+</svg>
